@@ -1,0 +1,50 @@
+1. Create a local Git repository, commit files, connect it to a remote GitHub repository, and
+push the changes.
+
+
+1 Create a New Project Directory
+
+mkdir project1
+cd project1
+
+2 Initialize Git:
+
+git init
+
+3 Create some files
+
+cat > f1
+welcome to devops lab
+4 Add files
+
+git add .
+git commit -m "Initial commit"
+
+
+
+5 Create a Remote Repository (on GitHub)
+
+Log in to GitHub.
+
+Click the '+' sign in the upper-right corner and select "New repository".
+
+Fill in a Repository name (e.g., project1).
+
+Choose Public.
+
+Click "Create repository".
+
+
+6 Connect Local to Remote
+
+git remote add origin <paste GitHub link>
+
+
+
+7 Push the changes:
+
+git push -u origin main
+
+enter your GitHub username and Personal Access Token (PAT) for authentication.
+
+our local repository is now connected to GitHub, and your files are visible online!

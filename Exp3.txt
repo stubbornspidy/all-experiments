@@ -1,0 +1,45 @@
+3. Create a remote repository, clone it to local git repository, commit files and push changes to
+remote repository.
+
+
+Create the Remote Repository (on GitHub)
+
+Log in to GitHub (or GitLab, Bitbucket, etc.).
+
+Click the '+' icon (top right) and select "New repository".
+
+Enter a Repository name (e.g., my-cloned-project).
+
+Optionally, add a description and choose Public or Private.
+
+Crucially, initialize the repository by checking the box next to "Add a README file". (This ensures the repository has at least one commit so you can successfully clone it.)
+
+Click "Create repository".
+
+On the new repository page, click the < > Code button and copy the HTTPS or SSH URL. (You'll use this in the next step).
+
+
+2. 💻 Clone, Commit, and Push Changes (Git Commands)
+
+
+
+git clone <YOUR_REPO_URL>
+
+cd my-cloned-project
+
+
+# Create a new file
+cat > f1 
+This is a new file created locally.
+
+# Stage the new file for tracking
+git add f1.txt
+
+# Commit the changes locally
+git commit -m "Add new f1.txt file after cloning"
+
+
+Push Changes to the Remote
+
+git push origin main
+

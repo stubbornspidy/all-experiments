@@ -1,0 +1,46 @@
+2. Give git commands to demonstrate a fast forward merge and three-way merge.
+
+
+Part 1: Initial Repository Setup Commands
+
+mkdir git-merge-demo
+cd git-merge-demo
+git init
+echo "This file is in the initial commit" > shared_file.txt
+git add .
+git commit -m "C1: Initial commit of project"
+
+
+Part 2: Fast-Forward Merge Commands
+
+git checkout -b feature/ff
+echo "Feature FF content" >> ff_feature.txt
+git add .
+git commit -m "C2: Commit on feature/ff"
+
+Perform the Merge
+
+git checkout main
+git merge feature/ff
+git log --oneline --graph --all
+
+
+
+Part 3: Three-Way Merge Commands
+
+git checkout -b feature/3way
+echo "Feature 3WAY content" >> 3way_feature.txt
+git add .
+git commit -m "C3: Commit on feature/3way"
+git checkout main
+echo "Main branch bug fix" >> shared_file.txt
+git add .
+git commit -m "C4: Commit on main (causes divergence)"
+
+
+Perform the Merge
+
+git merge feature/3way
+git log --oneline --graph --all
+
+
